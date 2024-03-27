@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  
+  <script src="https://kit.fontawesome.com/5d4dc46553.js" crossorigin="anonymous"></script>
+
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  
+  <title>Polybotics D² | Password Generator</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <main class="main">
+    <div class="container">
+      <div class="passwordDisplay"></div>
+      
+      <div class="copyIcon">
+        <i class="fa fa-copy"></i>
+      </div>
+    </div>
+    
+    <div class="container">
+      
+      <section class="section1">
+        <div class="commonText">Character Length</div>
+        <div class="passwordLength">8</div>
+      </section>
+      
+      <section class="section2">
+        <input id="lengthHandle" onchange="characterCountHandle(event)" type="range" value="8" min="8" max="15">
+      </section>
+      
+      <section class="section3">
+        <label for="addUpperCase" class="choiceTab">
+          <input type="checkbox" id="addUpperCase" class="choiceInput" checked hidden>
+          <span class="checkmark"></span>
+          <span class="commonText">Include Uppercase Letter</span>
+        </label>
+        
+        <label for="addLowerCase" class="choiceTab">
+          <input type="checkbox" id="addLowerCase" class="choiceInput" checked hidden>
+          <span class="checkmark"></span>
+          <span class="commonText">Include Lowercase Letter</span>
+        </label>
+        
+        <label for="addNumber" class="choiceTab">
+          <input type="checkbox" id="addNumber" class="choiceInput" checked hidden>
+          <span class="checkmark"></span>
+          <span class="commonText">Include Number</span>
+        </label>
+      </section>
+      
+      <section class="section4">
+        <div class="commonText">STRENGTH:</div>
+        <div class="passwordStrength">weak</div>
+      </section>
+      
+      
+      <section class="section5">
+        <button class="generateBtn">Generate Password</button>
+      </section>
+      
+    </div>
+  </main>
+  
+  
+<script src="script.js"></script>
+</body>
+</html>

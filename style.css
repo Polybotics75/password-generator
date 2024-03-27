@@ -1,0 +1,211 @@
+
+:root{
+  --white: hsl(0, 0%, 100%);
+  --off-white: hsl(0, 0%, 80%);
+  --grey: hsl(0, 0%, 20%);
+  --dark-grey: hsl(0, 0%, 12%); 
+  --off-black: hsl(0, 0%, 8%);
+  --green: hsl(75, 94%, 57%);
+}
+
+*,body{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', serif;
+}
+
+body{
+  width: 100vw;
+  min-height: 100dvh;
+  background: var(--off-black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main.main{
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.container{
+  width: 100%;
+  padding: 20px;
+  border-radius: 3px;
+  background: var(--dark-grey);
+  display: flex;
+}
+.container:nth-child(1){
+  align-items: center;
+  justify-content: space-between;
+}
+.container:nth-child(2){
+  flex-direction: column;
+  gap: 10px
+}
+
+.passwordDisplay{
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--white);
+}
+.copyIcon{
+  font-size: 16px;
+  color: var(--green);
+}
+
+
+.section1{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.commonText{
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--off-white);
+}
+.passwordLength{
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--green);
+}
+
+.section2{
+  width: 100%;
+}
+/**/
+input[type=range] {
+  height: 5px;
+  -webkit-appearance: none;
+  position: relative;
+  overflow: hidden;
+  margin: 10px 0;
+  width: 100%;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  animate: 0.05s;
+  background: var(--grey);
+  border-radius: 0px;
+}
+input[type=range]::-webkit-slider-thumb {
+  border: 1px solid var(--green);
+  height: 20px;
+  width: 20px;
+  border-radius: 13px;
+  background: var(--white);
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -8px;
+  box-shadow: calc(-1 * 320px) 0 0 320px var(--green);
+}
+
+/**/
+
+.section3{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 15px 0;
+}
+.choiceTab{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+/**/
+/* Create a custom checkbox */
+.checkmark{
+  position: relative;
+  height: 15px;
+  width: 15px;
+  background: transparent;
+  border: 1px solid var(--off-white);
+}
+
+/* On mouse-over, add a grey background color */
+.checkmark:hover{
+  background: var(--off-white);
+}
+
+/* When the checkbox is checked, add a blue background */
+.choiceTab input:checked ~ .checkmark {
+  background: var(--green);
+  border: 1px solid var(--green);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.choiceTab input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 50%;
+  top: 50%;
+  width: 2px;
+  height: 5px;
+  border: solid var(--off-black);
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+/**/
+
+
+.section4{
+  width: 100%;
+  padding: 10px;
+  border-radius: 3px;
+  background: var(--grey);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.passwordStrength{
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--green);
+}
+
+
+.section5{
+  width: 100%;
+}
+button.generateBtn{
+  width: 100%;
+  height: 54px;
+  background: var(--green);
+  border-radius: 3px;
+  border: none;
+  outline: 0;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--off-black);
+}
+.generateBtn:hover{
+  background: var(--grey);
+  color: var(--green);
+}
